@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "rent-cars_react-native",
+    "slug": "rent-cars_react-native",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
