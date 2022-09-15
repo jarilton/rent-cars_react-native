@@ -18,6 +18,7 @@ export const HeaderContent = styled.View`
   flex-direction: row;
   justify-content: flex-end;
   justify-content: space-between;
+  align-items: center;
 `;
 
 export const TotalCars = styled.Text`
