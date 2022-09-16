@@ -3,7 +3,20 @@ import React from "react";
 import { BackButton } from "../../components/BackButton";
 import { ImageSlider } from "../../components/ImageSlider";
 
-import { Container, Header, CarImages } from "./styles";
+import {
+  Container,
+  Header,
+  CarImages,
+  Content,
+  Details,
+  Description,
+  Brand,
+  Name,
+  Rent,
+  Period,
+  Price,
+  About,
+} from "./styles";
 
 export function CarDetails() {
   return (
@@ -19,6 +32,27 @@ export function CarDetails() {
           ]}
         />
       </CarImages>
+
+      <Content>
+        <Details>
+          <Description>
+            <Brand>Lamborghini</Brand>
+            <Name>Huracan</Name>
+          </Description>
+
+          <Rent>
+            <Period>Ao dia</Period>
+            <Price>R$ 580</Price>
+          </Rent>
+        </Details>
+
+        <About>
+          Com consumo médio de 13.7 litros/100km, 0 aos 100 km/h em 2.9
+          segundos, velocidade máxima de 325 km/h, um peso de 1382 kgs, o
+          Huracan Performante está equipado com um motor V de 10 cilindros
+          atmosférico, a Gasolina.
+        </About>
+      </Content>
     </Container>
   );
 }
