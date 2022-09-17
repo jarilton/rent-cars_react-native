@@ -25,7 +25,9 @@ import {
   Price,
   About,
   Acessories,
+  Footer
 } from "./styles";
+import { Button } from "../../components/Button";
 
 export function CarDetails() {
   return (
@@ -70,7 +72,23 @@ export function CarDetails() {
           Huracan Performante está equipado com um motor V de 10 cilindros
           atmosférico, a Gasolina.
         </About>
+        <About>
+          Com consumo médio de 13.7 litros/100km, 0 aos 100 km/h em 2.9
+          segundos, velocidade máxima de 325 km/h, um peso de 1382 kgs, o
+          Huracan Performante está equipado com um motor V de 10 cilindros
+          atmosférico, a Gasolina.
+        </About>
+        <About>
+          Com consumo médio de 13.7 litros/100km, 0 aos 100 km/h em 2.9
+          segundos, velocidade máxima de 325 km/h, um peso de 1382 kgs, o
+          Huracan Performante está equipado com um motor V de 10 cilindros
+          atmosférico, a Gasolina.
+        </About>
       </Content>
+
+      <Footer>
+        <Button title="Confirmar"/>
+      </Footer>
     </Container>
   );
 }
