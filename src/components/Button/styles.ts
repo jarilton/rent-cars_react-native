@@ -13,8 +13,7 @@ export const Container = styled(RectButton)<ButtonProps>`
   justify-content: center;
   align-items: center;
 
-  background-color: ${({ theme, color }) =>
-    color ? color : theme.colors.main};
+  background-color: ${({ color }) => color};
 `;
 
 export const Title = styled.Text`
