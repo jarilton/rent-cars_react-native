@@ -70,7 +70,7 @@ export const Price = styled.Text`
   font-size: ${RFValue(25)}px;
 `;
 
-export const Acessories = styled.View`
+export const Accessories = styled.View`
   width: 100%;
   flex-direction: row;
   flex-wrap: wrap;
@@ -135,7 +135,7 @@ export const RentalPriceDetails = styled.View`
 
 export const RentalPriceQuota = styled.Text`
   font-family: ${({ theme }) => theme.fonts.primary_500};
-  font-size: ${RFValue(10)};
+  font-size: ${RFValue(15)};
   color: ${({ theme }) => theme.colors.title};
 `;
 export const RentalPriceTotal = styled.Text`
