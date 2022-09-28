@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-
+import { StatusBar } from "react-native";
 import BrandSvg from "../../assets/brand.svg";
 import LogoSvg from "../../assets/logo.svg";
 
@@ -11,7 +11,7 @@ import Animated, {
   withTiming,
   interpolate,
   Extrapolate,
-  runOnJS
+  runOnJS,
 } from "react-native-reanimated";
 
 import { Container } from "./styles";
@@ -58,13 +58,18 @@ export function Splash() {
 
   useEffect(() => {
     splashAnimation.value = withTiming(50, { duration: 1000 }, () => {
-      'worklet'
+      "worklet";
       runOnJS(startApp)();
     });
   }, []);
 
   return (
     <Container>
+      <StatusBar
+        barStyle="light-content"
+        backgroundColor="transparent"
+        translucent
+      />
       <Animated.View style={[brandStyles, { position: "absolute" }]}>
         <BrandSvg width={80} heigth={50} />
       </Animated.View>

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Feather } from "@expo/vector-icons";
 import { RFValue } from "react-native-responsive-fontsize";
 import { format } from "date-fns";
-import { Alert } from "react-native";
+import { Alert, StatusBar } from "react-native";
 
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { useTheme } from "styled-components";
@@ -114,6 +114,11 @@ export function SchedulingDetails() {
 
   return (
     <Container>
+      <StatusBar
+        barStyle="dark-content"
+        backgroundColor="transparent"
+        translucent
+      />
       <Header>
         <BackButton onPress={handleBack} />
       </Header>
