@@ -6,7 +6,7 @@ import { Ionicons } from "@expo/vector-icons";
 
 import { useTheme } from "styled-components";
 import { useNavigation } from "@react-navigation/native";
-import { StatusBar, StyleSheet } from "react-native";
+import { StatusBar, StyleSheet, BackHandler } from "react-native";
 import { RFValue } from "react-native-responsive-fontsize";
 
 import { RectButton, PanGestureHandler } from "react-native-gesture-handler";
@@ -84,6 +84,12 @@ export function Home() {
     getCars();
   }, []);
 
+  useEffect(() => {
+    BackHandler.addEventListener("hardwareBackPress", () => {
+      return true;
+    });
+  });
+
   return (
     <Container>
       <StatusBar
@@ -94,7 +100,9 @@ export function Home() {
       <Header>
         <HeaderContent>
           <Logo width={RFValue(108)} height={RFValue(12)} />
-          <TotalCars>{`Total de ${cars.length} carros`}</TotalCars>
+          {!loading && (
+            <TotalCars>{`Total de ${cars.length} carros`}</TotalCars>
+          )}
         </HeaderContent>
       </Header>
 
