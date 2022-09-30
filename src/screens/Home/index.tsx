@@ -10,9 +10,9 @@ import { StatusBar, StyleSheet, BackHandler } from "react-native";
 import { RFValue } from "react-native-responsive-fontsize";
 
 import { RectButton, PanGestureHandler } from "react-native-gesture-handler";
-
 import Logo from "../../assets/logo.svg";
-import { Load } from "../../components/Load";
+
+import { LoadingAnimation } from "../../components/LoadingAnimation";
 import { Car } from "../../components/Car";
 
 import { Container, Header, HeaderContent, TotalCars, CarList } from "./styles";
@@ -107,7 +107,7 @@ export function Home() {
       </Header>
 
       {loading ? (
-        <Load />
+        <LoadingAnimation />
       ) : (
         <CarList
           data={cars}
