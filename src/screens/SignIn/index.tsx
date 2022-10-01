@@ -2,6 +2,7 @@ import React from "react";
 import { StatusBar } from "react-native";
 import { Button } from "../../components/Button";
 import { Input } from "../../components/Input";
+import { InputPassword } from "../../components/InputPassword";
 import theme from "../../styles/theme";
 import { Container, Header, Title, SubTitle, Footer, Form } from "./styles";
 
@@ -28,6 +29,7 @@ export function SignIn() {
           autoCorrect={false}
           autoCapitalize="none"
         />
+        <InputPassword iconName="lock" placeholder="Senha" />
       </Form>
 
       <Footer>
