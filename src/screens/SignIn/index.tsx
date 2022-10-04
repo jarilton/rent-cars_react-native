@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigation } from "@react-navigation/native";
 import {
   StatusBar,
   KeyboardAvoidingView,
@@ -17,14 +18,19 @@ export function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const navigation = useNavigation();
+
+  function handleFirstStep() {
+    navigation.navigate("SignUpFirstStep");
+  }
+
   async function handleSignIn() {
     try {
       const schema = Yup.object().shape({
         email: Yup.string()
           .required("E-mail obrigatório")
           .email("Digite um e-mail válido"),
-        password: Yup.string()
-          .required("A senha é obrigatória"),
+        password: Yup.string().required("A senha é obrigatória"),
       });
 
       await schema.validate({ email, password });
@@ -86,9 +92,9 @@ export function SignIn() {
               title="Criar conta gratuita"
               color={theme.colors.background_secondary}
               light
-              onPress={() => {}}
+              onPress={handleFirstStep}
               loading={false}
-              enabled={false}
+              enabled={true}
             />
           </Footer>
         </Container>
