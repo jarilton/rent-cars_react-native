@@ -91,7 +91,13 @@ export function SchedulingDetails() {
         id: car.id,
         unavailable_dates,
       })
-      .then(() => navigation.navigate("SchedulingComplete"))
+      .then(() => {
+        navigation.navigate("Confirmation", {
+          nextScreenRoute: "Home",
+          title: "Carro Alugado!",
+          message: `Agora você só precisa ir\naté a concessionária da Rent Cars\npegar seu automóvel`,
+        });
+      })
       .catch(() => {
         Alert.alert("Não foi possivel confirmar o agendamento.");
         setLoading(false);
