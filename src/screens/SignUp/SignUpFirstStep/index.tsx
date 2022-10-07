@@ -11,6 +11,7 @@ import * as Yup from "yup";
 import { BackButton } from "../../../components/BackButton";
 import { Bullet } from "../../../components/Bullet";
 import { Input } from "../../../components/Input";
+import { Button } from "../../../components/Button";
 
 import {
   Container,
@@ -22,7 +23,8 @@ import {
   FormTitle,
   Footer,
 } from "./styles";
-import { Button } from "../../../components/Button";
+
+import { useAuth } from "../../../hooks/auth";
 
 export function SignUpFirstStep() {
   const [name, setName] = useState("");
@@ -30,6 +32,8 @@ export function SignUpFirstStep() {
   const [driverLicense, setDriverLicense] = useState("");
 
   const navigation = useNavigation();
+  const { user } = useAuth();
+  console.log("USUÁRIO AUTENTICADO!!", user);
 
   function handleBack() {
     navigation.goBack();
